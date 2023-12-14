@@ -626,7 +626,6 @@ h3#textSub span {
 
 .character {
     position: relative;
-    height: 350px;
     background: #000;
     border-radius: 50px;
     overflow: hidden;
