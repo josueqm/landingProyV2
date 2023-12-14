@@ -112,3 +112,27 @@ function animate() {
 }
 
 animate(0);
+
+// Manejo de Evento Click del Dropdown de Idioma y carga el idioma seleccionado
+document.querySelectorAll('.menuIdioma .dropdown-item').forEach(item => {
+    item.addEventListener('click', function() {
+        let text = this.textContent;
+        let abbr = text.substring(0, 3).toUpperCase(); // Obtiene las 3 letras
+        document.querySelector('#navbarIdioma').textContent = abbr;
+
+        // Carga el archivo de idioma correspondiente
+        let idioma = this.id; 
+        fetch('/landing-laia-php/lang/' + idioma + '.json')
+        .then(response => response.json()).then(data => {
+            // 'data' es el objeto JSON que acabas de cargar
+            // Actualiza el texto en tu página web
+            document.querySelectorAll('[data-translate]').forEach(function(element) {
+                let key = element.getAttribute('data-translate');
+                element.textContent = data[key];
+            });
+        });
+    });
+});
+
+
+

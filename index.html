@@ -25,47 +25,62 @@
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-              <!-- navbar -->
+              <!-- navbar admin -->
             <div class="collapse navbar-collapse " id="navbarNav">
               <!-- menu -->
               <ul class="navbar-nav  mb-2 mb-lg-0"> <!-- mx-auto -->
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#home" data-translate="inicio">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#roadmap" class="nav-link">Roadmap</a>
+                  <a href="#roadmap" class="nav-link" data-translate="roadmap">Roadmap</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#about" class="nav-link">About</a>
+                  <a href="#about" class="nav-link" data-translate="about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#ranking" class="nav-link">Ranking</a>
+                  <a href="#ranking" class="nav-link" data-translate="ranking">Ranking</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toogle" id="navbarIdioma" role="button" data-bs-toggle="dropdown" aria-expanded="false">ENG</a>
+                  <ul class="dropdown-menu menuIdioma" aria-labelledby="navbarIdioma">
+                    <li><a class="dropdown-item" id="ca">Català </a></li>
+                    <li><a class="dropdown-item" id="en">English</a></li>
+                    <li><a class="dropdown-item" id="es">Español</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toogle" id="navbarAdmin" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarAdmin">
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarAdmin">
                     <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
                     <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
                   </ul>
                 </li>
+                
               </ul>
               
-            </div>                  
+            </div>
+
+            <!-- navbar languajes tralator -->
+            
           </div>
         </nav>
       </header>
         
         <section class="home" id="home">
           <div class="textHeader">
-            <img src="./media/LaiasBITMOJI/hi.png" alt="image laia home">
             <h2 id="textIndu">रो श न</h2>
             <h1 id="textMain"> LAIA </h1>
-            <h3 id="textSub">ens il·lumines<span>?</span> </h3>
+            <!-- ens il·lumines -->
+            <h3 id="textSub">you enlighten us<span>?</span></h3>
           </div>
           
           <div class="btn-box">
-            <a class="btn btn-animate" href="#roadmap">PLAY NOW</a>
+            <!-- Modal Action -->
+            <a class="btn btn-animate" href="#roadmap" data-bs-toggle="modal" data-bs-target="#modalLogin">PLAY NOW</a>
           </div>
+
+          <!-- data-bs-toggle="modal" data-bs-target="#modalLogin" -->
           
           <div class="divider-bottom">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -90,30 +105,24 @@
                 <!-- description -->
                 <div class="stage-description">
                   <h2 class="stage-location">Barcelona</h2>
-                  <span class="stage-duration">00:15:00</span>
                 </div>
               </div>
               <!-- Brasil -->
               <div class="col-md-3 col-sm-6 col-12 card-stage">
                 <div class="stage-description">
                   <h2 class="stage-location">Brasil</h2>
-                  <span class="stage-duration">00:15:00</span>
                 </div>
               </div>
               <!-- Kenia -->
               <div class="col-md-3 col-sm-6 col-12 card-stage">
-                
                 <div class="stage-description">
                   <h2 class="stage-location">Kenia</h2>
-                  <span class="stage-duration">00:15:00</span>
                 </div>
               </div>
               <!-- India -->
               <div class="col-md-3 col-sm-6 col-12 card-stage">
-                
                 <div class="stage-description">
                   <h2 class="stage-location">India</h2>
-                  <span class="stage-duration">00:15:00</span>
                 </div>
               </div>
               
@@ -134,17 +143,20 @@
                 <h2 class="title">LAIA?</h2>
               </div>
               <div class="col-8 about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>
+                  <strong>Laia</strong> una aventurera Catalana, tiene una <strong>misión muy importante:</strong> ayudar a sus amigos a electrificar con <strong>energías renovables </strong> distintos pueblos del mundo. Para lograrlo, Laia se ha propuesto recorrer <strong>Brasil, Kenia e India.</strong>
+                  ¿Te animas a ayudarla a iluminar el mundo? ¡Juega con ella y descubre cómo puedes contribuir a esta noble causa!
+                </p>
               </div>
             </div>
             <div class="row">
               <div class="col-4">
                 <div class="about-img">
-                  <img src="./media/LaiasBITMOJI/bird friends.png" alt="">
+                  <img src="./media/LaiasBITMOJI/laia-web.png" alt="image About Laia">
                 </div>
-                <div class="btn-box">
+                <!-- <div class="btn-box">
                   <a class="btn">roadmap</a>
-                </div>
+                </div> -->
               </div>
               <!-- Flags -->
               <div class="col-8">
@@ -178,24 +190,11 @@
                 <div class="w-100 character"> <!-- card -->
                   <div class="img-character"><img src="./media/personajes/cauan4.jpeg" alt=""></div> <!-- poster -->
                   <div class="details">
-                    <h1>Cuan</h1>
+                    <h1>Cauan Mirin</h1>
                     <h2>Brasil</h2>
-                    <div class="tags">
-                      <span class="tag"></span>
-                      <span class="tag"></span>
-                      <span class="tag"></span>
-                    </div>
                     <p class="desc">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      La misión en este juego es crear una red de energía, que permita dotar de electricidad una escuela del Poblado de Tatuyo, para lograrlo Laia debera de obtener los objetos necesarios que son bombillas, cables con enchufes y placas solares.
                     </p>
-                    <!-- necesidades en su pais -->
-                    <div class="cast">
-                      <h3>Missions</h3>
-                      <ul>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -204,24 +203,11 @@
                 <div class="w-100 character">
                   <div class="img-character"><img src="./media/personajes/malik3.jpeg" alt=""></div> <!-- poster -->
                   <div class="details">
-                    <h1>Malik</h1>
+                    <h1>Malik Pokot</h1>
                     <h2>Kenia</h2>
-                    <div class="tags">
-                      <span class="tag"></span>
-                      <span class="tag"></span>
-                      <span class="tag"></span>
-                    </div>
                     <p class="desc">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Juego matemático, que permita a Laia conocer la velocidad del viento que se origina en el pueblo de Kenia. Para lograrlo deberás realizar cálculos matemáticos que ayuden a resolverlo y que estos datos puedan ser útiles para aprovecharlos en estaciones de energía eólica.
                     </p>
-                    <!-- necesidades en su pais -->
-                    <div class="cast">
-                      <h3>Missions</h3>
-                      <ul>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -230,24 +216,11 @@
                 <div class="w-100 character">
                   <div class="img-character"><img src="./media/personajes/alisha3.jpeg" alt=""></div> <!-- poster -->
                   <div class="details">
-                    <h1>Alisha</h1>
+                    <h1>Alisha Singh</h1>
                     <h2>India</h2>
-                    <div class="tags">
-                      <span class="tag"></span>
-                      <span class="tag"></span>
-                      <span class="tag"></span>
-                    </div>
                     <p class="desc">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Por último, presentamos un juego entretenido de tipo puzle, ¡un Memory clásico! Que deberás completar tres niveles para poder superarlo. La dificultad irá creciendo a medida que completes un nivel. Supera las pruebas y siéntete orgullo de posicionarte en el top de nuestro ranking. ¡Vamos por ello!
                     </p>
-                    <!-- necesidades en su pais -->
-                    <div class="cast">
-                      <h3>Missions</h3>
-                      <ul>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -264,7 +237,7 @@
               <div class="col col-md-6">
                 <!-- titulos encabezados de seccion -->
                 <div class="head-ranking">
-                  <p>latest winners</p>
+                  <h3>latest winners</h3>
                   <h2 class="title">LeaderBoard</h2>
                 </div>
               </div>
@@ -427,6 +400,35 @@
 
         </footer>
         <!-- FOOTER END -->
+
+        <!-- Modal LOGIN -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <!-- <h5 class="modal-title" id="welcomeModalLabel">LOGIN</h5> -->
+                      <h3 class="modal-title" id="welcomeModalLabel">Bienvenido</h3>
+                  </div>
+                  <div class="modal-body">
+                      
+                      <form action="" method="post">
+                        <div class="mb-5">
+                          <h1>LOGIN</h1>
+                        </div>
+                        <div class="mb-4">
+                          <input type="text" class="form-control" id="userName" name="userName" placeholder=" Username o Email" required>
+                        </div>
+                        <div class="mb-4">
+                          <button type="submit" class="btn btn-login" name="login">Iniciar sesión</button>
+                      </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
 
         <!-- Button Back to Top -->
         <button type="button" class="btn" id="back-to-top">
